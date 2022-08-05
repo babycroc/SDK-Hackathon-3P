@@ -62,8 +62,8 @@ function Main() {
     }
 
     const getNewAvatarImg = () => {
-        const randomIndex = Math.floor(Math.random()*3 + 1);
-        setAvatarImg(`lion${randomIndex}.png`);
+        const randomIndex = Math.floor(Math.random()*7 + 1);
+        setAvatarImg(`avatar${randomIndex}.png`);
     }
 
     useEffect(() => {
@@ -102,7 +102,7 @@ function Main() {
                 )}
             </div>
             <div className="avatar">
-                <img src={`images/${avatarImg}`} alt="" />
+                <img src={`images/${avatarImg}`} alt="" height="400px" />
             </div>
         </div>
     );
