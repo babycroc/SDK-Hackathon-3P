@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes  from "prop-types";
 
 function _Text({text}){
-    setInterval(()=> {
-      return <><p>{text}<br/></p></>;
-    }, 5000);
+  return (
+    <><p>{text}<br/></p></>
+  )
 };
 
 _Text.propTypes = {
