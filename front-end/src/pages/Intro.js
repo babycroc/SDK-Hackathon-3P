@@ -20,8 +20,15 @@ function Intro() {
 
     return (
         <div className="container">
-            <div style={{ padding: "100px" }}>
+            <div style={{ padding: "100px", paddingBottom:"30px"}}>
                 <img src="images/gametitle.png"></img>
+            </div>
+            <div id="dev-box">
+                <ul id="dev">
+                    <li>👑  김건 - Backend + Illustrate </li>
+                    <li>🐧 이지윤 - Frontend + Design</li>
+                    <li>🎈 한수빈 - Frontend + Design</li> 
+                </ul>
             </div>
             <div>
                 <input type="text" id="nickname" value={nickname} placeholder="닉네임을 적어줘" onChange={handleChange} />
