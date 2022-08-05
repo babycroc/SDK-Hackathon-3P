@@ -10,8 +10,12 @@ function Intro() {
     }
 
     const redirectPage = () => {
-        if(nickname) window.location.href = "/greeting";
-        else console.log("enter nickname");
+        if(nickname) {
+            localStorage.setItem("nickname", nickname);
+            window.location.href = "/greeting";
+        } else {
+            console.log("enter nickname");
+        }
     }
 
     return (
