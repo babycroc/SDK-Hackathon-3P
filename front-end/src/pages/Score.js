@@ -65,7 +65,7 @@ function Score() {
                     { score }
                 </div>
                 <div>
-                    <img src="images/avatar0.png" width="300px" />
+                    <img src="images/avatar0.png" width="200px" />
                 </div>
             </div>
             <div className="right-panel">
@@ -78,7 +78,7 @@ function Score() {
                         </tr>
                     </thead>
                     <tbody>
-                        {scoreList.map((item, index) => {
+                        {scoreList.map((item, index) => { 
                             return (
                                 <tr>
                                     <td className="index">{ index + 1 }</td>
