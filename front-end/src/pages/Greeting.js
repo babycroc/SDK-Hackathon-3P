@@ -33,10 +33,6 @@ function Greeting () {
         return () => clearInterval(timer);
     }, [index]);
 
-    const redirectPage = () => {
-        window.location.href = "/script";
-    };
-
     return (
         <div className="container">
             <div className="text_box">
