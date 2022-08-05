@@ -31,4 +31,5 @@ button.quiz-item:hover {
     justify-content: center;
     color: white;
     font-weight: bold;
+    font-size: larger;
 }
