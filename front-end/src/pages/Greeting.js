@@ -24,9 +24,6 @@ function Greeting () {
 
     return (
         <div className="container">
-            <div id="button-box">
-                <button id="script-button" onClick={redirectPage} type="button">❓</button>
-            </div>
             <div className="text_box">
                 {greeting_text.map((txt, index) => <_Text key={index} text ={txt}/>)}
             </div>
