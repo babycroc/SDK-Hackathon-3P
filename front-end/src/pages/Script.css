@@ -19,11 +19,12 @@
     background-color: var(--orange);
     border-radius: 15px;
     text-align: center;
+    align-items: center;
 }
 
 #title {
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #scription {
@@ -38,14 +39,13 @@
 }
 
 #gamestart-btn{
-
     width: max-content;
-    height: 100px; 
+    padding: 20px 40px; 
     line-height:40px; 
     border: 3px solid red;
     background-color: var(--background-color);
     border-radius: 15px;
-    margin:20px 30px;
+    margin: 20px 30px;
     margin-left: 65%;
     font-size: larger;
     text-align:center; 
