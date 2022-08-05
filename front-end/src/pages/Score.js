@@ -47,7 +47,7 @@ function Score() {
         endAudio.play();
         saveScore();
         const sortedScoreList = scoreData.sort((a, b) => b.score - a.score);
-        const removeDuplicates = sortedScoreList.filter((item, idx) => !(item.nickname === nickname && (idx !== 0 && sortedScoreList[idx-1].nickname === nickname)));
+        const removeDuplicates = sortedScoreList.filter((item, idx) => !(item.nickname === nickname && (idx !== 0 && sortedScoreList[idx-1].nickname === nickname && sortedScoreList[idx-1].score === score)));
         setScoreList(removeDuplicates);
     }, []);
 
