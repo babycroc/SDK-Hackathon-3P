@@ -34,5 +34,6 @@
     font-size: 18px;
     position: relative;
     left: 50%;
+    margin-top: 100px;
     transform: translateX(-50%);
 }
