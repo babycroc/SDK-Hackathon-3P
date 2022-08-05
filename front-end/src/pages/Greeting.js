@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 
 const greeting_text = [
     "안녕? 나는 심심이야.", 
-    " 하…오늘도 너무 심심해 미칠 것 같아.",
+    "하…오늘도 너무 심심해 미칠 것 같아.",
     "뭔가 재미난 일을 해보고 싶은데 말이야..","어떤 활동을 해볼지 항상 고민이야.",
     "뭐? 네가 나를 도와주겠다고?",
     "(아니 내가 언제…?)",
@@ -30,7 +30,7 @@ function Greeting () {
 
         const timer = setInterval(() => {
             setIndex(index + 1);
-        }, 4000);
+        }, 3000);
 
         if(index >= greeting_text.length - 1) clearInterval(timer);
     
@@ -40,8 +40,9 @@ function Greeting () {
     return (
         <div className="container">
             <div className="text_box">
-                <p>{greeting_text[index]}<br/></p>
+                <p id="greeting_text">{greeting_text[index]}<br/></p>
             </div>
+            <div className="triangle"></div>
             <div>
             <NavLink to={"/script"}><img id="greeting_image" src="images/avatar0.png" alt="안녕! 나는 심심이야!"/></NavLink>
             </div>  

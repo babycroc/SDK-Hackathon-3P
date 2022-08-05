@@ -6,20 +6,28 @@
     align-items: center;
     background-color: var(--background-color);
 }
-
 .text_box {
     width: 500px;
     height: 100px;
     margin : 30px;
+    margin-bottom: 0px;
     padding: 10px;
     border-radius: 35%;
     background-color: white;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    
 }
-
+.triangle{
+    width: 0px;
+    height: 0px;
+    border-top: 24px solid white;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+#greeting_text{
+    font-weight: 600;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 40px;
+}
 #greeting_image{
     display: inline-block;
     margin: 25px 25px;
@@ -27,21 +35,4 @@
     height: 300px;
     vertical-align: middle;
 }
-#button-box{
-    width: 100%;
-    display: inline-block;
-}
-#script-button{
-        float: right;
-        width: max-content;
-        height: 100px; 
-        line-height:40px; 
-        border: 3px solid var(--orange);
-        background-color: var(--background-color);
-        border-radius: 15px;
-        margin:15px 30px;
-        font-size: larger;
-        text-align:center; 
-        cursor: pointer;  
-        transition:all 0.9s, color 0.3;  
-}
+

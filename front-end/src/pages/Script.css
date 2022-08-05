@@ -5,7 +5,6 @@
 }
 
 .container {
-
     margin: 30px;
     padding: 20px;
     border-radius: 15px;
@@ -20,12 +19,11 @@
     background-color: var(--orange);
     border-radius: 15px;
     text-align: center;
-    justify-content: center;
 }
 
 #title {
     color: white;
-    font-size: large;
+    font-size: 30px;
 }
 
 #scription {
@@ -36,18 +34,19 @@
 }
 #button-box {
     width: 100%;
-    display: inline-block;
+    display: flex;
 }
 
 #gamestart-btn{
-    float: right;
+
     width: max-content;
     height: 100px; 
     line-height:40px; 
     border: 3px solid red;
     background-color: var(--background-color);
     border-radius: 15px;
-    margin:15px 30px;
+    margin:20px 30px;
+    margin-left: 65%;
     font-size: larger;
     text-align:center; 
     cursor: pointer;  
