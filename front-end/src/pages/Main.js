@@ -85,7 +85,7 @@ function Main() {
     }
 
     return (
-        <div id="main-page">
+        <div className="container">
             <div className="quiz-container">
                 {quizItems.map(item => 
                     <button className="quiz-item" onClick={() => updateScore(item.score)}>

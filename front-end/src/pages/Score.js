@@ -40,7 +40,7 @@ function Score() {
     }, []);
 
     return (
-        <div id="score-page">
+        <div className="container">
             <div className="left-panel">
                 <div className="score-box">
                     { nickname }의 점수는 <br />

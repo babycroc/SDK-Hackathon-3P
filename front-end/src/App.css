@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 :root {
+  --background-color: #f8f6e9;
   --button-color: #6cc2ff;
   --button-hover: #34a8fb;
+  --dark-blue: #231955;
+  --blue: #1F4690;
+  --orange: #E8AA42;
 }
 
 .App {
