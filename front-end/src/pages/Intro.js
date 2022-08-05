@@ -21,10 +21,10 @@ function Intro() {
     return (
         <div className="container">
             <div style={{ padding: "100px" }}>
-                <div id="intro-image"></div>
+                <img src="images/gametitle.png"></img>
             </div>
             <div>
-                <input type="text" id="nickname" value={nickname} onChange={handleChange} />
+                <input type="text" id="nickname" value={nickname} placeholder="닉네임을 적어줘" onChange={handleChange} />
                 <button id="start-button" onClick={redirectPage}>시작</button>
             </div>
         </div>
