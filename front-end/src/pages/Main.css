@@ -19,11 +19,14 @@ button.quiz-item {
 
 .score-box {
     display: inline-block;
-    position: absolute;
     border: solid 1px black;
     padding: 10px;
     width: 50px;
+    line-height: 1.5em;
+}
+
+#main-page .score-box {
+    position: absolute;
     right: 5%;
     bottom: 50%;
-    line-height: 1.5em;
 }
