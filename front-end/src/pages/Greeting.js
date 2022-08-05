@@ -20,9 +20,14 @@ const greeting_text = [
 ];
 
 function Greeting () {
+    const [startAudio] = useState(new Audio("sounds/start.wav"));
+
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
+        startAudio.loop = true;
+        startAudio.play();
+
         const timer = setInterval(() => {
             setIndex(index + 1);
             // console.log(index)
