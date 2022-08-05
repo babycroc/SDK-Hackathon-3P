@@ -19,7 +19,7 @@ function Intro() {
     }
 
     return (
-        <div id="intro-page">
+        <div className="container">
             <div style={{ padding: "100px" }}>
                 <div id="intro-image"></div>
             </div>
