@@ -6,7 +6,6 @@
 
 .container {
 
-
     margin: 30px;
     padding: 20px;
     border-radius: 15px;
@@ -15,7 +14,7 @@
 }
 
 #title-box {
-    width: 100%;
+    width: 50%;
     height: 75px;
     margin: 30px;
     background-color: var(--orange);

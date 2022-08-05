@@ -51,13 +51,13 @@ function Score() {
                     { score }
                 </div>
                 <div>
-                    <img src="images/lion1.png" />
+                    <img src="images/avatar0.png" width="300px" />
                 </div>
             </div>
             <div className="right-panel">
                 <table>
                     <thead>
-                        <tr>
+                        <tr style={{ fontWeight: "bold" }}>
                             <td className="index"></td>
                             <td className="nickname">닉네임</td>
                             <td className="score">점수</td>
