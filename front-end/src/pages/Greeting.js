@@ -26,7 +26,7 @@ function Greeting () {
         const timer = setInterval(() => {
             setIndex(index + 1);
             // console.log(index)
-        }, 1000);
+        }, 4000);
         console.log(index)
 
         if(index >= greeting_text.length - 1) clearInterval(timer);
