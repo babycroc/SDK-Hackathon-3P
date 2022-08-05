@@ -1,15 +1,19 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Intro from "./pages/Intro";
+import Greeting from "./pages/Greeting";
 
 import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Route exact path="/" element={<Intro/>} />
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Intro />} />
+        <Route path="/greeting" element={<Greeting />} />
+      </Routes>
+    </Router>
   );
 }
 
