@@ -46,6 +46,8 @@ const randomQuizItems = [
 ];
 
 function Main() {
+    const [clickAudio] = useState(new Audio("sounds/click.mp3"));
+
     const [quizNumber, setQuizNumber] = useState(0);
     const [currentScore, setCurrentScore] = useState(0);
     const [quizItems, setQuizItems] = useState([]);
@@ -80,12 +82,18 @@ function Main() {
     }, [quizNumber]);
 
     const updateScore = (score) => {
+        clickAudio.pause();
         setCurrentScore(currentScore + score);
         setQuizNumber(quizNumber+1);
+        clickAudio.play();
     }
 
     return (
         <div className="container">
+            <div className="score-box">
+                점수 <br/>
+                { currentScore }
+            </div>
             <div className="quiz-container">
                 {quizItems.map(item => 
                     <button className="quiz-item" onClick={() => updateScore(item.score)}>
@@ -95,10 +103,6 @@ function Main() {
             </div>
             <div className="avatar">
                 <img src={`images/${avatarImg}`} alt="" />
-            </div>
-            <div className="score-box">
-                점수 <br/>
-                { currentScore }
             </div>
         </div>
     );
