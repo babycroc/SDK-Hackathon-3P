@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import "./Score.css";
 
@@ -33,6 +34,13 @@ function Score() {
             nickname: nickname,
             score: score
         });
+        // axios.post(`http://localhost:3007/result`, {
+        //     nickname: nickname,
+        //     score: score
+        // })
+        // .then(res => {
+        //     console.log("Data saved");
+        // })
     }
 
     useEffect(() => {

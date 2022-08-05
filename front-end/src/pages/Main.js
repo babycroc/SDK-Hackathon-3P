@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import "./Main.css";
 
@@ -66,9 +67,19 @@ function Main() {
         setAvatarImg(`avatar${randomIndex}.png`);
     }
 
+    const getNewQuiz = () => {
+        axios.get(`http://localhost:3007/problem`)
+        .then(res => {
+            const data = res.data;
+            setQuizItems([data.choices["1"], data.choices["2"], data.choices["3"], data.choices["4"]]);
+            setAvatarImg(`avatar${data.img.imgid}.png`);
+        })
+    }
+
     useEffect(() => {
         getNewQuizItems();
         getNewAvatarImg();
+        // getNewQuiz();
     }, []);
 
     useEffect(() => {
