@@ -22,6 +22,8 @@ let scoreData = [
 ];
 
 function Score() {
+    const [endAudio] = useState(new Audio("sounds/end.mp3"));
+
     const [scoreList, setScoreList] = useState([]);
     const nickname = localStorage.getItem("nickname");
     const score = localStorage.getItem("score");
@@ -34,13 +36,14 @@ function Score() {
     }
 
     useEffect(() => {
+        endAudio.play();
         saveScore();
         const sortedScoreList = scoreData.sort((a, b) => b.score - a.score);
         setScoreList(sortedScoreList);
     }, []);
 
     return (
-        <div className="container">
+        <div id="score-page">
             <div className="left-panel">
                 <div className="score-box">
                     { nickname }의 점수는 <br />
