@@ -1,6 +1,8 @@
 import React from "react";
 import "./Greeting.css";
 import _Text from "../component/_Text";
+import {NavLink} from "react-router-dom";
+
 
 function Greeting () {
     const redirectPage = () => {
@@ -28,7 +30,9 @@ function Greeting () {
             <div className="text_box">
                 {greeting_text.map((txt, index) => <_Text key={index} text ={txt}/>)}
             </div>
-            <img id="greeting_image"src="https://item.kakaocdn.net/do/22123a4d3901f1c18f93ba6c3626fe3e8f324a0b9c48f77dbce3a43bd11ce785" alt="안녕! 나는 심심이야!"></img> 
+            <div>
+            <NavLink to={"/script"}><img id="greeting_image" src="images/avatar0.png" alt="안녕! 나는 심심이야!"/></NavLink>
+            </div>  
         </div>
     );
 }
