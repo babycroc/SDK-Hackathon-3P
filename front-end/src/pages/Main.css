@@ -1,0 +1,29 @@
+#main-page {
+    text-align: center;
+    align-items: center;
+}
+
+.quiz-container {
+    margin: 20px 0;
+}
+
+button.quiz-item {
+    display: inline-block;
+    width: 20%;
+    height: 100px;
+    vertical-align: middle;
+    margin: 10px;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+.score-box {
+    display: inline-block;
+    position: absolute;
+    border: solid 1px black;
+    padding: 10px;
+    width: 50px;
+    right: 5%;
+    bottom: 50%;
+    line-height: 1.5em;
+}
