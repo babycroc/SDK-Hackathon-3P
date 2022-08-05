@@ -30,25 +30,31 @@ function Score() {
     const score = localStorage.getItem("score");
 
     const saveScore = () => {
-        scoreData.push({
-            nickname: nickname,
-            score: score
-        });
-        // axios.post(`http://localhost:3007/result`, {
+        // scoreData.push({
         //     nickname: nickname,
         //     score: score
-        // })
-        // .then(res => {
-        //     console.log("Data saved");
-        // })
+        // });
+        axios.post(`http://localhost:3007/result`, {
+            userName: nickname,
+            scoreSum: score
+        })
+        .then(res => {
+            console.log("Data saved");
+        })
     }
 
     useEffect(() => {
         endAudio.play();
         saveScore();
-        const sortedScoreList = scoreData.sort((a, b) => b.score - a.score);
-        const removeDuplicates = sortedScoreList.filter((item, idx) => !(item.nickname === nickname && (idx !== 0 && sortedScoreList[idx-1].nickname === nickname && sortedScoreList[idx-1].score === score)));
-        setScoreList(removeDuplicates);
+        // const sortedScoreList = scoreData.sort((a, b) => b.score - a.score);
+        // const removeDuplicates = sortedScoreList.filter((item, idx) => !(item.nickname === nickname && (idx !== 0 && sortedScoreList[idx-1].nickname === nickname && sortedScoreList[idx-1].score === score)));
+        // setScoreList(removeDuplicates);
+        axios.get(`http://localhost:3007/scoreboard`)
+        .then(res => {
+            const sortedScoreList = res.data.sort((a, b) => b.scoreSum - a.scoreSum).filter(x => x.scoreSum);
+            const removeDuplicates = sortedScoreList.filter((item, idx) => !(idx !== 0 && sortedScoreList[idx-1].userName === nickname && sortedScoreList[idx-1].scoreSum === score));
+            setScoreList(removeDuplicates);
+        })
     }, []);
 
     return (
@@ -76,8 +82,8 @@ function Score() {
                             return (
                                 <tr>
                                     <td className="index">{ index + 1 }</td>
-                                    <td className="nickname">{ item.nickname }</td>
-                                    <td className="score">{ item.score }</td>
+                                    <td className="nickname">{ item.userName }</td>
+                                    <td className="score">{ item.scoreSum }</td>
                                 </tr>
                             )
                         })}

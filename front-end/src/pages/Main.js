@@ -71,24 +71,28 @@ function Main() {
         axios.get(`http://localhost:3007/problem`)
         .then(res => {
             const data = res.data;
-            setQuizItems([data.choices["1"], data.choices["2"], data.choices["3"], data.choices["4"]]);
-            setAvatarImg(`avatar${data.img.imgid}.png`);
+            setQuizItems([data.choices[1], data.choices[2], data.choices[3], data.choices[4]]);
+            setAvatarImg(`avatar${data.img.imgId}.png`);
+        }).catch(error => {
+            console.log(error);
         })
+        console.log("hi" + quizNumber)
     }
 
-    useEffect(() => {
-        getNewQuizItems();
-        getNewAvatarImg();
-        // getNewQuiz();
-    }, []);
+    // useEffect(() => {
+    //     // getNewQuizItems();
+    //     // getNewAvatarImg();
+    //     getNewQuiz();
+    // }, []);
 
     useEffect(() => {
         if(quizNumber === 10) {
             localStorage.setItem("score", currentScore);
             window.location.href = "/score";
         } else {
-            getNewQuizItems();
-            getNewAvatarImg()
+            // getNewQuizItems();
+            // getNewAvatarImg();
+            getNewQuiz();
         }
     }, [quizNumber]);
 
@@ -106,8 +110,8 @@ function Main() {
                 { currentScore }
             </div>
             <div className="quiz-container">
-                {quizItems.map(item => 
-                    <button className="quiz-item" onClick={() => updateScore(item.score)}>
+                {quizItems.map((item, idx) => 
+                    <button key={idx} className="quiz-item" onClick={() => updateScore(item.score)}>
                         { item.activity }
                     </button>
                 )}

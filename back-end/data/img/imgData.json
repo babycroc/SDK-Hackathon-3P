@@ -1,0 +1,52 @@
+{
+    "0" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "1" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "2" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "3" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "4" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "5" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "6" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "7" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "8" : {
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    },
+    "9":{
+        "type" : "education",
+        "participants" : 0,
+        "price" : 0.2
+    }
+}
