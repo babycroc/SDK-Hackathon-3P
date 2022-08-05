@@ -5,6 +5,7 @@ import Intro from "./pages/Intro";
 import Greeting from "./pages/Greeting";
 import Script from "./pages/Script";
 import Main from "./pages/Main";
+import Score from "./pages/Score";
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/greeting" element={<Greeting />} />
           <Route path="/script" element ={<Script/>} />
           <Route path="/main" element={<Main />} />
+          <Route path="/score" element={<Score />} />
         </Routes>
       </Router>
     </div>

@@ -69,15 +69,19 @@ function Main() {
         getNewAvatarImg();
     }, []);
 
-    const updateScore = (score) => {
-        setCurrentScore(currentScore + score);
-        setQuizNumber(quizNumber+1);
+    useEffect(() => {
         if(quizNumber === 10) {
+            localStorage.setItem("score", currentScore);
             window.location.href = "/score";
         } else {
             getNewQuizItems();
             getNewAvatarImg()
         }
+    }, [quizNumber]);
+
+    const updateScore = (score) => {
+        setCurrentScore(currentScore + score);
+        setQuizNumber(quizNumber+1);
     }
 
     return (
@@ -90,7 +94,7 @@ function Main() {
                 )}
             </div>
             <div className="avatar">
-                <img src={`images/${avatarImg}`} />
+                <img src={`images/${avatarImg}`} alt="" />
             </div>
             <div className="score-box">
                 점수 <br/>
